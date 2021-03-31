@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!---<script>
+        let tomb=[];
+        for(let i = 0; i < 10; i++){
+            tomb[i] = Math.floor(Math.random()*20)+1;
+        }
+        document.write(tomb);
+        document.write("<br>")
+        tomb.sort(function(a,b){return a-b});
+        document.write(tomb);
+    </script>--->
+
+    <!---<script>
+        let obj = {egy: true, 
+                   hello: 12, 
+                   ketto: 2,
+                   paros: function(a){
+                       return a%2==0 ? true:false;
+                   }};
+        document.write(obj.hello);
+        document.write("<br>")
+        document.write(obj.paros(20));
+        document.write("<br>")
+        obj.asd = "asd";
+        document.write(obj.asd)
+    </script>--->
+    
+    <script>
+        let obj = { egy:122,
+                    ketto:"hehe",
+                    harom:true};
+        document.write(obj.egy)
+        document.write("<br>")
+        obj.negy = 20;
+        document.write(obj.negy)
+        document.write("<br>")
+        obj.fuggveny=function(){
+            return this.ketto +" "+ this.negy;
+        }
+        document.write(obj.fuggveny());
+    </script>
+</body>
+</html>

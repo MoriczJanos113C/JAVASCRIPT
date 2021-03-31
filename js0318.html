@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Írjunk programot, amely két beviteli mezőt, egy gombot és egy kiviteli mezőt tartalmaz! Az első mezőbe egy nevet várjon(nev), a másodikba egy egész számot, amely azt jelzi, hány óra van! A kiviteli mezőbe írjunk üzenetet a gomb megnyomása után:
+        - 0-9: „Jó reggelt, ’nev’!”
+        - 10-16: „Jó napot, ’nev’!”
+        - 17-24: „Jó estét, ’nev’!”
+        - <0 vagy >24:”” (üres String)</h1>
+
+    <input type="text" id="nev">
+    <input type="number" id="ora">
+    <button id="koszon">Köszönt</button>
+    <p id="kimenet"></p>
+
+    <script>
+        const nev = document.getElementById("nev");
+        const ora = document.getElementById("ora");
+        const koszon = document.getElementById("koszon");
+        const kimenet = document.getElementById("kimenet");
+
+        function kiir() {
+            if (ora.value >= 0 && ora.value <= 9){
+                kimenet.innerHTML="Jó reggelt "+nev.value;
+            }
+            else if(ora.value >= 10 && ora.value <= 16){
+                kimenet.innerHTML="Jó napot"+nev.value;
+            }
+            else if(ora.value >= 17 && ora.value <= 24){
+                kimenet.innerHTML="Jó estét"+nev.value;
+            }
+            else{
+                kimenet.innerHTML="";
+            }
+        }
+
+        koszon.addEventListener("click", kiir);
+
+    </script>
+
+    <h1>Írjunk programot, amely két beviteli mezőt, egy gombot és egy kiviteli mezőt tartalmaz! A gomb háttere legyen zöld alapból, ha fölé visszük az egeret, a felirat színe váltson fehérre! Ha megnyomjuk, a kiviteli mezőbe írja ki a nagyobbik számot!</h1>
+
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button id="gomb">Lássuk</button>
+    <p id="kimenet"></p>
+
+    <script>
+        const num1 = document.getElementById("num1");
+        const num2 = document.getElementById("num2");
+        const gomb = document.getElementById("gomb");
+        const kimenet = document.getElementById("kimenet");
+
+        function nagyobb(){
+            if(num1.value>num2.value){
+                kimenet.innerHTML=num1.value;
+            }
+            else{
+                kimenet.innerHTML=num2.value;
+            }
+        }
+
+        gomb.addEventListener("click", nagyobb);
+
+    </script>
+
+
+</body>
+</html>

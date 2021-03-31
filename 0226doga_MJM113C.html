@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let telefonkonyv = { JakabMatyas:30630341,
+                             KulcsarEdina:306314515
+                            };
+
+        
+        telefonkonyv.LionelMessi = 30630412;
+        document.write(telefonkonyv.LionelMessi);
+        document.write("<br>");
+
+    </script>
+    <script>
+        let tomb=[3, true, "valami"];
+        tomb.unshift('hello');
+        tomb.push(5);
+        document.write(tomb);
+        document.write("<br>");
+    </script>
+
+    <script>
+        let tomb2=[];
+        for(let i = 0; i < 10; i++){
+            tomb2[i] = Math.floor(Math.random()*10)+1;
+        }
+        document.write(tomb2);
+        document.write("<br>");
+        document.write(tomb2.includes(5));
+        document.write("<br>");
+        tomb2.sort(function(a,b){return b-a});
+        document.write(tomb2[9]);
+
+    </script>
+</body>
+</html>

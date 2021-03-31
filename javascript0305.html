@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="szoveg">Szöveg</p>
+    <button id="btn1">Átméretez</button>
+    <button id="btn2">Megjelenít</button>
+    <button id="btn3">Szöveg háttér</button>
+<br><br>
+    <img src="C:\Users\moric\Desktop/download.jpg" alt="dassda" id="kep1" style="width: 300px; height: 350px; display: block;">
+    
+    
+    
+    <script>
+        const pszoveg= idleker("szoveg");
+        const button1=idleker("btn1");
+        const image=idleker("kep1");
+        const button2=idleker("btn2");
+        const button3=idleker("btn3");
+
+
+        button1.addEventListener("mouseover", szinValtas);
+        button1.addEventListener("mouseout", alap);
+        button1.addEventListener("click", kepMeret);
+        button2.addEventListener("click", megjelenit);
+        button3.addEventListener("click", pValtozas);
+
+        function pValtozas(){
+            pszoveg.style.background="red";
+        }
+
+        function megjelenit(){
+            if(image.style.display==="block"){
+                image.style.display="none";
+            }
+            else{
+                image.style.display="block";
+            }
+            /*if(image.style.visibility==="visible"){
+                image.style.visibility="hidden";
+            }
+            else{
+                image.style.visibility="visible";
+            }*/
+        }
+
+
+        function kepMeret(){
+            if(image.style.width=="50px"){
+                image.style.height="250px";
+                image.style.width="300px";
+            }
+            else{
+                image.style.height="50px";
+                image.style.width="50px";
+            }
+        }
+
+        function alap(){
+            button1.style.backgroundColor="";
+            button1.style.color="";
+        }
+
+
+        function szinValtas(){
+            button1.style.backgroundColor="red";
+            button1.style.color="yellow";
+        }
+
+        function idleker(idleker){
+            return document.getElementById(idleker);
+        }
+
+
+    </script>
+</body>
+</html>

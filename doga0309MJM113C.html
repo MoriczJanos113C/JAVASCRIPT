@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doga</title>
+</head>
+<body>
+
+    <input type = "text" id = "nev" width="5"></input> 
+    <input type = "number" id = "number" width="5"></input> 
+    <button id = "idogomb">GOMB</button>
+    <p id = "koszones"></p>
+<script>
+    const idogomb = document.getElementById("idogomb");
+    const koszones = document.getElementById("koszones");
+      
+</script>
+
+<br><br>
+
+
+    <input type = "number1" id = "number1"></input> 
+    <input type = "number2" id = "number2"></input> 
+    <button id = "gomb" style="background-color: green;">GOMB</button>
+    <p id = "nagyobbb"></p>
+
+    <script>
+        const gomb = document.getElementById("gomb");
+        const nagyobbb = document.getElementById("nagyobbb");
+        const number1 = document.getElementById("number1");
+        const number2 = document.getElementById("number2");
+
+        function onMouseOver(){
+            gomb.style.color="white"
+        }
+
+        function onMouseOut(){
+            gomb.style.color=""
+        }
+
+        function nagyobb(){
+            if(number1.value>number2.value){
+                nagyobbb.innerHTML = parseInt(number1.value);
+            }
+            else{
+                nagyobbb.innerHTML = parseInt(number2.value);
+            }
+        }
+        gomb.addEventListener("mouseover", onMouseOver);
+        gomb.addEventListener("mouseout", onMouseOut);
+        gomb.addEventListener("click", nagyobb);
+
+    </script>
+
+
+<br><br>  
+
+
+    <button id="btn1">Megjelenítés/Eltüntetés</button>
+<br><br>
+    <img src="C:\Users\moric\Desktop/download.jpg" alt="image" id="image" style="display: block;">
+    
+    
+    
+    <script>
+        const image=idleker("image");
+        const button1=idleker("btn1");
+
+        button1.addEventListener("click", megjelenit);
+
+
+
+        function megjelenit(){
+            if(image.style.display==="block"){
+                image.style.display="none";
+            }
+            else{
+                image.style.display="block";
+            }
+        }
+        function idleker(idleker){
+            return document.getElementById(idleker);
+        }
+
+    </script>
+    
+</body>
+</html>

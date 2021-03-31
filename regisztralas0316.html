@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" id="nev">
+        <input type="date" id="szulev">
+        <form id="form">
+            <label for="cars"></label>
+            <br>
+            <select name="nem" id="nemek">
+                <option value="ferfi">Férfi</option>
+                <option value="no">Nő</option>
+            </select>
+        <br>
+        <label for="vanE">Van-e krónikus betegsége:</label>
+        <br>
+        <select name="van" id="betegseg">
+            <option value="van">Van</option>
+            <option value="nincs">Nincs</option>
+        </select>
+        <br>
+    </form>
+    <button id="regisztral">Regisztrálok</button>
+    <br>
+    <textarea name="" id="kimenet" cols="30" rows="10"></textarea>
+    <script>
+        function ref(a){
+            return document.getElementById(a);
+        }
+        const nev=ref("nev");
+        const szulev=ref("szulev");
+        const nemek=ref("nemek");
+        const betegseg=ref("betegseg");
+        const gomb=ref("regisztral");
+        const kimenet=ref("kimenet");
+
+        function kiir(){
+            kimenet.innerHTML="Sikeres regisztráció!\n"+nev.value+"\n"+szulev.value+"\n"+nemek.value+"\n"+"Krónikus betegsége: "+betegseg.value;
+        }
+
+        gomb.addEventListener("click", kiir);
+
+    </script>
+</body>
+</html>

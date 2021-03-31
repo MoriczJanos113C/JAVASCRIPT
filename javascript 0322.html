@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="gomb">Hello</button>
+    <p id="kimenet"></p>
+
+    <script>
+        const gomb = document.getElementById("gomb");
+        const kimenet = document.getElementById("kimenet");
+
+         /*---első megoldás---*/
+
+        /*function kiir(){
+            kimenet.innerHTML = "hello világ";
+        }
+
+
+        gomb.addEventListener("click", kiir);*/
+
+                /*---második megoldás---*/
+
+        document.getElementById("gomb").addEventListener("click", function(){
+            document.getElementById("kimenet").innerHTML="HelloVilág";
+        });
+
+        document.getElementById("gomb").addEventListener("mouseout", function(){
+            document.getElementById("kimenet").innerHTML="";
+        });
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="nagyit">Nagyítás/UP</button>
+    <button id="kicsinyit">Kicsinyítés/DOWN</button>      
+    <p id="szoveg">Szöveg/Text</p>
+    <script>
+        const nagyit=document.getElementById("nagyit");
+        const kicsinyit=document.getElementById("kicsinyit");
+        const szoveg=document.getElementById("szoveg");
+
+
+        let szm=20;
+        function nagyIT(){
+            if(szm<30){
+            szoveg.style.fontSize=++szm+"px";
+        }
+    }
+
+        function kicsiNYIT(){
+            if(szm>14){
+            szoveg.style.fontSize=--szm+"px";
+        }
+    }
+
+        function fole(){
+            nagyit.style.background="green";
+            nagyit.style.fontSize="25px";
+            nagyit.style.color="white";
+        }
+
+        function foleKI(){
+            nagyit.style.background="";
+            nagyit.style.fontSize="";
+            nagyit.style.color="";
+        }
+
+
+
+        function fole2(){
+            kicsinyit.style.background="red";
+            kicsinyit.style.fontSize="25px";
+            kicsinyit.style.color="white";
+        }
+
+        function foleKI2(){
+            kicsinyit.style.background="";
+            kicsinyit.style.fontSize="";
+            kicsinyit.style.color="";
+        }
+
+        
+
+        nagyit.addEventListener("click", nagyIT);
+        nagyit.addEventListener("mouseover", fole);
+        nagyit.addEventListener("mouseout", foleKI);
+        kicsinyit.addEventListener("click", kicsiNYIT);
+        kicsinyit.addEventListener("mouseover", fole2);
+        kicsinyit.addEventListener("mouseout", foleKI2);
+
+    </script>
+</body>
+</html>

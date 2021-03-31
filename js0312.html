@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="gyujto">
+                    <img src="" alt="">
+            
+            <h1>Pizzák</h1>
+        <div class="forma">
+            <form action="">
+            <select name="meret" id="meret">
+                <option value="28">28cm</option>
+                <option value="32">32cm</option>
+                <option value="40cm">40cm</option>
+            </select>
+
+
+            <select name="pizzak" id="pizzak">
+                <option value="Szalámis">Szalámis</option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Sonkagomba">Sonkagomba</option>
+            </select>
+
+            <input type="text" placeholder="Név" id="nev">
+            <input type="text" placeholder="Cím" id="cim">
+            <input type="text" placeholder="Tel:" id="tel">
+            <textarea name="megjegyzes" id="megjegyzes" cols="30" rows="10"></textarea>
+            <button type="button" id="megrendel">Megrendelem</button>
+            <textarea name="osszesites" id="osszesites" cols="30" rows="10"></textarea>
+        </form>
+    </div>
+</div>
+<script>
+    const meret=idleker("meret");
+    const pizzak=idleker("pizzak");
+    const nev=idleker("nev");
+    const cim=idleker("cim");
+    const tel=idleker("tel");
+    const megjegyzes=idleker("megjegyzes");
+    const megrendel=idleker("megrendel");
+    const osszesites=idleker("osszesites");
+
+
+    function megrendEl(){
+        let osszes=meret.value+" "+pizzak.value+" "+nev.value+" "+cim.value+" "+tel.value+" "+megjegyzes.value;
+        osszesites.value=osszes;
+    }
+
+    megrendel.addEventListener("click", megrendEl);
+
+    function idleker(id){
+        return document.getElementById(id);
+    }
+</script>
+
+</body>
+</html>

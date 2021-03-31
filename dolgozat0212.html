@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Első feladat</h1>
+        <script>
+            
+            let szam = 1;
+            function tiz(){
+            do{   
+                document.write(szam+"&nbsp&nbsp"+szam*10+"<br>");
+                szam++;
+            }while(szam<=10);
+        }
+        tiz()
+    </script>
+
+    <h1>Második feladat</h1>
+        <script>
+            function fiatalE(a) {
+                if(a<25){
+                    return "fiatal"
+                }
+                else if(a<50) {
+                    return "középkorú"
+                }
+                else if(a>=50) {
+                    return "idős"
+                }
+            }
+            document.write(fiatalE(30));
+        
+            document.write(fiatalE(18));
+        
+            document.write(fiatalE(50));
+        </script>
+
+    <h1>Harmadik feladat</h1>   
+        <script>
+            function legkisebb(c,d,e) {
+                if (c<d && c<e) {
+                    return c
+                }
+                else if (d<c && d<e) {
+                    return d
+                }
+                else {
+                    return e
+                }
+            }
+            document.write(legkisebb(22,33,44));
+        </script>
+
+    <h1>Negyedik feladat</h1>
+        <script>
+            for(let i=1; i<=50; i++){
+                if(i%7!=0 & i % 4!=0){
+                    document.write(i+"&nbsp&nbsp&nbsp");
+                }
+            }
+        </script>
+
+    <h1>Ötödik feladat</h1>
+        <script>
+            let valtozo = "valtozo"
+            function valtozozo() {
+                let valtozo= "valtozo";
+            }
+        </script>
+</body>
+</html>

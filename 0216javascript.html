@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {};
+        obj.elso= "1.";
+        obj.masodik="2.";
+        document.write(obj.elso);
+        document.write(obj["masodik"]);
+
+
+        let objektum = {3: "egy", "hamis":false};
+        document.write("<br>" + objektum["3"]);
+        document.write("<br>" + objektum["hamis"]);
+        document.write("<br>" + objektum.hamis);
+        objektum.harmadik= "3";
+        document.write("<br>" + objektum.harmadik);
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+        let tomb = [1, 1.5, false, "almasalma"];
+        document.write("<br>"+ tomb);
+        tomb.reverse();
+        document.write("<br>" + tomb);
+        tomb.push("körtefa");
+        document.write("<br>" + tomb);
+        document.write("<br>");
+        document.write(tomb.includes("almasalma"));
+        document.write("<br>");
+        tomb.shift();
+        document.write(tomb);
+        tomb.pop();
+        document.write("<br>");
+        document.write(tomb);
+    </script>
+</body>
+</html>

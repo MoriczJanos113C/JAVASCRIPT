@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esemeny</title>
+</head>
+<body>
+        <!--
+        <button id = "btnGomb">GOMB</button>
+            <p id = "pKiIr"></p>
+            
+
+        -->
+   
+    <script>
+        /*
+        const gomb = document.getElementById("btnGomb");
+        const kiIr = document.getElementById("pKiIr");                
+       function onMouseOver(){
+            gomb.style.background = "yellow";
+            kiIr.innerHTML = "Egér a gomb fölött!"
+        }      
+        function onMouseOut(){
+            gomb.style.background = "";
+            kiIr.innerHTML = ""
+        }            
+        gomb.addEventListener("mouseover", onMouseOver);
+        gomb.addEventListener("mouseout", onMouseOut);
+*/
+    </script>
+
+        <input type = "number" id = "inputNum1" width="5"></input>  
+        <br>    
+        <button id = "btnOsszeAd">+</button>
+        <button id = "btnKivon">-</button>
+        <button id = "btnSzoroz">*</button>
+        <button id = "btnOszt">/</button>
+        <br>
+        <input type = "number" id = "inputNum2" width="5"></input>  
+        <p id = "pEredmeny"></p>
+        <script>
+            const btnOsszeAd = document.getElementById("btnOsszeAd");
+            const btnKivon = document.getElementById("btnKivon");
+            const btnSzoroz = document.getElementById("btnSzoroz");
+            const btnOszt = document.getElementById("btnOszt");
+            const eredmeny = document.getElementById("pEredmeny");
+            const inputSzam1 = document.getElementById("inputNum1")
+            const inputSzam2 = document.getElementById("inputNum2")
+            
+            function osszead(){
+                eredmeny.innerHTML = "";
+                eredmeny.innerHTML = parseInt(inputSzam1.value)+parseInt(inputSzam2.value); 
+                eredmeny.style.backgroundColor="red";
+            }
+            function kivon(){
+                eredmeny.innerHTML = "";
+                eredmeny.innerHTML = inputSzam1.value-inputSzam2.value; 
+                eredmeny.style.backgroundColor="red";
+            }
+            function eloszt(){
+                eredmeny.innerHTML = "";
+                eredmeny.innerHTML = inputSzam1.value/inputSzam2.value; 
+                eredmeny.style.backgroundColor="red";
+            }
+            function szoroz(){
+                eredmeny.innerHTML = "";
+                eredmeny.innerHTML = inputSzam1.value*inputSzam2.value; 
+                eredmeny.style.backgroundColor="red";
+            }
+            btnOsszeAd.addEventListener("click", osszead);
+            btnKivon.addEventListener("click", kivon);
+            btnSzoroz.addEventListener("click", szoroz);
+            btnOszt.addEventListener("click", eloszt);
+        
+
+</script>
+
+
+
+</body>
+</html>
